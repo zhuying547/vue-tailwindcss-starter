@@ -50,3 +50,7 @@ Vite 通过 `postcss-import` 预配置支持了 CSS `@import` 内联，Vite 的�
 #### Using PostCSS as your preprocessor
 
 CSS 文件将由 PostCSS 处理。如果项目包含有效的 PostCSS 配置，它将会自动应用于所有已导入的 CSS。
+
+## Tailwindcss
+
+使用 `theme()` 函数，使用点符号访问 Tailwind 配置值。
