@@ -40,16 +40,21 @@ Vite主要由两部分组成：一个开发服务器，它基于 原生 ES 模�
 
 ### CSS
 
+这里主要是解释在 Vite 是如何处理 CSS 文件的：
 导入 `.css` 文件将会把内容插入到 `<style>` 标签中，同时也带有 HMR 支持。
 
 #### Build-time imports
 
-预处理器提供的最有用的功能之一就是将 CSS 整理成多个文件，并在构建时通过提前处理 @import 语句（而不是在浏览器中）将它们组合起来。
-Vite 通过 `postcss-import` 预配置支持了 CSS `@import` 内联，Vite 的路径别名也遵从 CSS `@import`。
+Vite 通过 `postcss-import` 预配置支持了 CSS `@import` 内联，Vite 的路径别名也遵从 CSS `@import`。**就是说不需要在postcss-load-config里配置它**。
+实现的功能就是可以使用 `@import` 时导入多个 CSS 文件（在构建时完成），不必等到浏览器加载时再去发送网络请求导入 CSS 文件。
 
 #### Using PostCSS as your preprocessor
 
 CSS 文件将由 PostCSS 处理。如果项目包含有效的 PostCSS 配置，它将会自动应用于所有已导入的 CSS。
+
+#### Optimizing for Production
+
+Vite 默认使用 `esbuild` 来最小化 CSS。
 
 ## Tailwindcss
 
