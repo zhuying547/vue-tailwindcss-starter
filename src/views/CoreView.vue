@@ -32,4 +32,10 @@
       </button>
     </div>
   </div>
+  <hr class="my-4" />
+  <button
+    class="mx-auto block rounded-full bg-sky-500 px-4 py-1 text-sm font-medium text-white hover:bg-sky-700"
+  >
+    Save changes
+  </button>
 </template>
