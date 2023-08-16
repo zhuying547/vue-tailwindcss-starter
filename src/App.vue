@@ -12,10 +12,10 @@ import { RouterLink, RouterView } from 'vue-router'
     </div>
     <div class="wrapper">
       <!-- <HelloWorld msg="You did it!" /> -->
-
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/core">Core View</RouterLink>
       </nav>
     </div>
   </header>
